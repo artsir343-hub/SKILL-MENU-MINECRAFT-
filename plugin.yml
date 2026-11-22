@@ -1,0 +1,95 @@
+name: SkillSMP
+version: 1.2.0
+main: dev.skillsmp.SkillSMP
+api-version: '26.1'
+description: SKILL SMP all-in-one menu - TPA, homes, kits, crates, RTP, economy, shop, auction, bounties, warps, welcome and more. Works for Java and Bedrock (Geyser).
+author: SKILL SMP
+
+commands:
+  menu:
+    description: Open the SKILL SMP menu
+    aliases: [skill]
+  tpa:
+    description: Send a teleport request
+  tpahere:
+    description: Ask a player to teleport to you
+  tpaccept:
+    description: Accept a teleport request
+  tpdeny:
+    description: Deny a teleport request
+  tpcancel:
+    description: Cancel your teleport request
+  sethome:
+    description: Set a home
+  home:
+    description: Teleport to a home
+  delhome:
+    description: Delete a home
+  homes:
+    description: Open your homes menu
+  kits:
+    description: Open the kits menu
+  kit:
+    description: Claim a kit
+  crates:
+    description: Open the crates menu
+    aliases: [crate]
+  rtp:
+    description: Random teleport
+    aliases: [wild]
+  money:
+    description: Show your balance
+    aliases: [bal, balance]
+  pay:
+    description: Pay another player
+  shop:
+    description: Open the shop
+  sell:
+    description: Sell items
+  ah:
+    description: Auction house
+    aliases: [auction]
+  top:
+    description: Leaderboards
+    aliases: [baltop, leaderboard]
+  economy:
+    description: Admin economy control
+    aliases: [eco]
+  adminpanel:
+    description: Open the admin panel
+  skillsmp:
+    description: Plugin admin command
+  warp:
+    description: Teleport to a warp
+    aliases: [warps]
+  spawn:
+    description: Teleport to spawn
+  setspawn:
+    description: Set the spawn (admin)
+  setwarp:
+    description: Create a warp (admin)
+  delwarp:
+    description: Delete a warp (admin)
+  back:
+    description: Go back to your last location
+  bounty:
+    description: Place or view bounties
+    aliases: [bounties]
+  daily:
+    description: Claim your daily reward
+  broadcast:
+    description: Broadcast a message (admin)
+    aliases: [bc]
+  lagclear:
+    description: Clear dropped items and XP orbs now (admin)
+    aliases: [clearlag]
+
+permissions:
+  skillsmp.admin:
+    default: op
+  skillsmp.owner:
+    default: op
+  skillsmp.bypass.cooldown:
+    default: op
+  skillsmp.bypass.warmup:
+    default: op

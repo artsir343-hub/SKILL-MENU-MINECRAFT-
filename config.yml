@@ -1,0 +1,328 @@
+# =====================================================================
+#  SKILL SMP v1.2 - main configuration
+#  Colors : &9 blue, &b aqua, &a green, &c red, &e yellow, &l bold, &#1E90FF hex
+#  Placeholders: %server% %player% %money% %money_short% %kills% %deaths% %kdr% %online% %playtime% %bounty%
+#  After editing run:  /skillsmp reload   (or Admin Panel -> Reload)
+#  When the plugin gets a new layout, your old file is saved as config-old.yml.
+# =====================================================================
+config-version: 3
+
+# The server name. Used in every menu title, the compass, the sidebar, messages.
+server-name: "&9&lSKILL SMP"
+
+# The menu compass (right-click / tap to open the menu). Cannot be dropped, comes back after death/loss.
+compass:
+  enabled: true
+  slot: 8
+  material: COMPASS
+  name: "%server% &fMenu"
+  lore:
+    - "&7Right-click to open the server menu"
+    - "&7RTP, TPA, Homes, Shop and more"
+
+# ---------------------------------------------------------------------
+#  LAG CLEAR - automatically removes dropped items and XP orbs
+# ---------------------------------------------------------------------
+lag:
+  enabled: true
+  interval: 300          # seconds (300 = every 5 minutes)
+  warnings: [30, 10, 5]  # seconds before the clear when everybody gets a warning
+
+# ---------------------------------------------------------------------
+#  WELCOME  (fully customizable colors/text)
+#  Extra placeholders here: %number% (player #) and %away% (time since last visit)
+#  Sound = a sound key like entity.player.levelup (empty = no sound)
+# ---------------------------------------------------------------------
+welcome:
+  # Join / quit message in chat. "default" = vanilla message, empty "" = hidden
+  join-message: "&8[&a+&8] &f%player%"
+  quit-message: "&8[&c-&8] &f%player%"
+  # shown ONLY the very first time a player joins
+  first-join:
+    enabled: true
+    broadcast: "%server% &8» &fWelcome &b%player% &fto the server! &7(Player #%number%)"
+    message:
+      - "&8&m                                   "
+      - "&fWelcome to %server%&f, &b%player%&f!"
+      - "&7Tap your &fcompass &7to open the menu."
+      - "&8&m                                   "
+    title: "&9&lWELCOME"
+    subtitle: "&b%player%"
+    title-seconds: 3
+    sound: "entity.player.levelup"
+    money: 0          # bonus money for new players (on top of starting balance)
+    kit: ""           # kit id to give automatically, example: starter
+  # shown every time a RETURNING player joins
+  join:
+    enabled: true
+    broadcast: ""
+    message:
+      - "&7Welcome back, &b%player%&7! You were away for &f%away%&7."
+    title: "&9&lWELCOME BACK"
+    subtitle: "&b%player%"
+    title-seconds: 3
+    sound: "entity.experience_orb.pickup"
+
+# ---------------------------------------------------------------------
+#  AUTO ANNOUNCEMENTS
+# ---------------------------------------------------------------------
+announcer:
+  enabled: false
+  interval: 300       # seconds
+  prefix: "%server% &8» &f"
+  messages:
+    - "&7Use your &bcompass &7to open the server menu!"
+    - "&7Claim your free reward every day with &a/daily&7."
+    - "&7Place a bounty on your enemies with &c/bounty&7."
+
+teleport:
+  warmup: 3            # seconds, player must stand still. 0 = instant
+
+rtp:
+  world: world
+  center-x: 0
+  center-z: 0
+  min-radius: 500
+  max-radius: 5000
+  cooldown: 300        # seconds
+  cost: 0              # money
+
+tpa:
+  timeout: 60          # seconds before a request expires
+  auto-open-menu: false  # true = open Accept/Deny menu for the target automatically (nice for Bedrock)
+
+homes:
+  limit: 5             # every player gets this many homes
+
+economy:
+  currency-symbol: "$"
+  starting-balance: 100
+  pay-min: 1
+  kill-reward: 0
+  auction-tax: 5       # percent taken from the seller
+  auction-max-listings: 5
+  auction-max-price: 1000000000
+  max-balance: 1000000000000000   # nobody can have more than this (1 quadrillion)
+
+daily:
+  reward: 500          # /daily reward
+  streak-bonus: 100    # extra money per day in a row
+  max-streak: 7
+
+bounty:
+  min: 100             # minimum bounty
+
+crates:
+  animation-steps: 24
+  animation-speed: 3   # ticks per step
+  # rarity names are picked from the chance (%) of the reward
+  legendary-below: 3
+  epic-below: 10
+  rare-below: 30
+  broadcast-below: 5   # tell everyone when a reward with this % or less is won (0 = never)
+
+# ---------------------------------------------------------------------
+#  SIDEBAR DASHBOARD
+#  compact: true  = small version (best for phones / Bedrock)
+#  compact: false = big version (full-lines)
+#  Placeholders: %money_short% (1.2K / 3.4M / 5.6B) is best for tiny spaces
+# ---------------------------------------------------------------------
+sidebar:
+  enabled: true
+  compact: true
+  lines:
+    - "&f%player%"
+    - "&9$ &f%money_short%"
+    - "&9K/D &f%kills%&7/&f%deaths%"
+    - "&9Time &f%playtime%"
+    - "&9Online &f%online%"
+  full-lines:
+    - "&8&m                    "
+    - "&9Name: &f%player%"
+    - "&9Money: &a%money%"
+    - "&9Kills: &c%kills%"
+    - "&9Deaths: &7%deaths%"
+    - "&9K/D: &f%kdr%"
+    - "&9Playtime: &f%playtime%"
+    - ""
+    - "&6Richest: &f%top_money%"
+    - "&cTop killer: &f%top_kills%"
+    - ""
+    - "&9Online: &f%online%"
+    - "%server%"
+
+# ---------------------------------------------------------------------
+#  MENUS  (change slot / material / name / lore of any button)
+#  Add your own button: give it a unique id and add  command: "spawn"
+# ---------------------------------------------------------------------
+menus:
+  filler: BLUE_STAINED_GLASS_PANE
+  page-size: 27        # items per page in list menus (27 = a shulker box, max 45)
+  click-delay: 700     # ms: taps right after the menu opens are ignored (fixes the mobile "tap goes through" teleport)
+  main:
+    title: "%server% &8» &7Menu"
+    rows: 4
+    fill: true
+    buttons:
+      stats:
+        slot: 4
+        material: BOOK
+        name: "&9&l%player%"
+        lore: ["&7Money: &a%money%", "&7Kills: &c%kills%  &7Deaths: &7%deaths%", "&7K/D: &f%kdr%", "&7Playtime: &f%playtime%"]
+      rtp:
+        slot: 10
+        material: ENDER_PEARL
+        name: "&bRandom Teleport"
+        lore: ["&7Teleport to a random place.", "", "&eClick to teleport"]
+      tpa:
+        slot: 11
+        material: ENDER_EYE
+        name: "&bTeleport Request"
+        lore: ["&7Send a TPA / TPAHERE request.", "", "&eClick to choose a player"]
+      homes:
+        slot: 12
+        material: RED_BED
+        name: "&bHomes"
+        lore: ["&7Set and teleport to your homes.", "", "&eClick to open"]
+      warps:
+        slot: 13
+        material: FILLED_MAP
+        name: "&bWarps"
+        lore: ["&7Teleport to server warps.", "", "&eClick to open"]
+      spawn:
+        slot: 14
+        material: BEACON
+        name: "&aSpawn"
+        lore: ["&7Teleport to spawn.", "", "&eClick to teleport"]
+      shop:
+        slot: 15
+        material: EMERALD
+        name: "&aShop"
+        lore: ["&7Buy and sell items.", "", "&eClick to open"]
+      auction:
+        slot: 16
+        material: GOLD_INGOT
+        name: "&6Auction House"
+        lore: ["&7Buy and sell with players.", "", "&eClick to open"]
+      kits:
+        slot: 19
+        material: CHEST
+        name: "&eKits"
+        lore: ["&7Claim your kits.", "", "&eClick to open"]
+      crates:
+        slot: 20
+        material: ENDER_CHEST
+        name: "&dCrates"
+        lore: ["&7Open crates for rewards.", "", "&eClick to open"]
+      bounty:
+        slot: 21
+        material: TARGET
+        name: "&cBounties"
+        lore: ["&7Place or collect bounties.", "", "&eClick to open"]
+      daily:
+        slot: 22
+        material: SUNFLOWER
+        name: "&eDaily Reward"
+        lore: ["&7Claim your free reward.", "", "&eClick to claim"]
+      top:
+        slot: 23
+        material: NETHER_STAR
+        name: "&9Leaderboards"
+        lore: ["&7Richest, kills, playtime.", "", "&eClick to open"]
+      admin:
+        slot: 25
+        material: COMMAND_BLOCK
+        name: "&c&lAdmin Panel"
+        lore: ["&7Control everything.", "", "&eClick to open"]
+      close:
+        slot: 31
+        material: BARRIER
+        name: "&cClose"
+        lore: []
+
+# ---------------------------------------------------------------------
+#  MESSAGES
+# ---------------------------------------------------------------------
+messages:
+  prefix: "%server% &8» &7"
+  no-permission: "&cYou don't have permission."
+  owner-only: "&cOnly the owner can do that."
+  players-only: "&cOnly players can use this."
+  player-not-found: "&cPlayer not found."
+  player-offline: "&cThat player is offline."
+  invalid-number: "&cThat is not a valid number."
+  invalid-value: "&cInvalid value."
+  invalid-name: "&cInvalid name (use letters, numbers, - and _)."
+  usage: "&cUsage: &f%usage%"
+  reloaded: "&aConfig reloaded."
+  prompt-cancelled: "&cCancelled."
+  saved: "&aSaved."
+  shop-saved: "&aShop updated."
+  tpa-self: "&cYou can't teleport to yourself."
+  tpa-sent: "&aRequest sent to &f%player%&a."
+  tpa-received: "&f%player% &7wants to teleport to you. Use &a/tpaccept &7or open the menu (compass -> TPA -> requests)."
+  tpahere-received: "&f%player% &7wants you to teleport to them. Use &a/tpaccept &7or open the menu (compass -> TPA -> requests)."
+  tpa-accepted: "&f%player% &aaccepted your request."
+  tpa-accepted-self: "&aRequest accepted."
+  tpa-denied: "&f%player% &cdenied your request."
+  tpa-denied-self: "&cRequest denied."
+  tpa-cancelled: "&7Your request was cancelled."
+  no-request: "&cYou have no pending request."
+  tp-warmup: "&7Teleporting in &f%seconds%s&7... don't move!"
+  tp-cancelled: "&cTeleport cancelled, you moved."
+  tp-done: "&aTeleported."
+  back-none: "&cNothing to go back to."
+  warp-missing: "&cThat warp does not exist."
+  warp-set: "&aWarp &f%name% &aset."
+  warp-deleted: "&aWarp &f%name% &adeleted."
+  home-set: "&aHome &f%name% &aset."
+  home-limit: "&cYou reached your home limit (&f%max%&c)."
+  home-deleted: "&aHome &f%name% &adeleted."
+  home-missing: "&cHome &f%name% &cdoes not exist."
+  rtp-cooldown: "&cRTP cooldown: &f%time%"
+  rtp-searching: "&7Searching for a safe place..."
+  rtp-failed: "&cCould not find a safe place, try again."
+  balance: "&7Your balance: &a%money%"
+  balance-other: "&f%player%&7's balance: &a%money%"
+  pay-sent: "&aYou paid &f%player% &a%money%."
+  pay-received: "&f%player% &apaid you &f%money%&a."
+  pay-self: "&cYou can't pay yourself."
+  pay-min: "&cMinimum payment is &f%min%&c."
+  not-enough-money: "&cYou need &f%cost% &cfor that."
+  bought: "&aBought &f%amount%x %item% &afor &f%cost%&a."
+  sold: "&aSold &f%amount%x %item% &afor &f%money%&a."
+  sold-all: "&aSold &f%amount% &aitems for &f%money%&a."
+  nothing-to-sell: "&cNothing to sell."
+  eco-changed: "&f%player%&7's balance is now &a%money%&7."
+  hold-item: "&cHold an item in your main hand first."
+  listed: "&aListed for &f%money%&a."
+  listing-limit: "&cYou reached your listing limit."
+  listing-gone: "&cThat listing no longer exists."
+  listing-cancelled: "&aListing cancelled, item returned."
+  listing-bought: "&aYou bought the item for &f%money%&a."
+  listing-sold: "&aYour item sold to &f%player% &afor &f%money%&a."
+  price-too-high: "&cThat price is too high."
+  kit-cooldown: "&cKit cooldown: &f%time%"
+  kit-once: "&cYou already claimed this one-time kit."
+  kit-claimed: "&aClaimed kit &f%kit%&a."
+  kit-no-perm: "&cYou can't use that kit."
+  kit-missing: "&cThat kit does not exist."
+  crate-no-key: "&cYou need a key for that crate."
+  crate-empty: "&cThat crate has no rewards."
+  crate-missing: "&cThat crate does not exist."
+  crate-won: "&aYou won: &f%reward% &8(%rarity%&8)"
+  crate-won-many: "&aYou opened &f%amount% &acrates and won: %rewards%"
+  crate-broadcast: "&f%player% &7won &f%reward% &7from the &f%crate% &8(%rarity%&8)&7!"
+  key-bought: "&aBought a &f%crate% &akey for &f%cost%&a."
+  key-not-sold: "&cKeys for this crate can't be bought."
+  keys-given: "&aGave &f%amount% &akey(s) of &f%crate% &ato &f%player%&a."
+  keys-line: "&7Keys &f%crate%&7: &a%amount%"
+  kill-reward: "&aKill reward: &f%amount%"
+  daily-wait: "&cYour daily reward is ready in &f%time%&c."
+  daily-claimed: "&aDaily reward: &f%money% &7(streak: &f%streak%&7)"
+  bounty-self: "&cYou can't put a bounty on yourself."
+  bounty-min: "&cMinimum bounty is &f%min%&c."
+  bounty-placed: "&f%player% &cplaced a bounty of &6%money% &con &f%target%&c!"
+  bounty-claimed: "&f%killer% &acollected the &6%money% &abounty on &f%victim%&a!"
+  lag-warn: "&eDropped items will be cleared in &f%seconds%s&e!"
+  lag-done: "&aLag clear: removed &f%items% &aitems and &f%orbs% &aXP orbs."

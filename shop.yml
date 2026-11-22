@@ -1,0 +1,256 @@
+# SKILL SMP shop. You can edit this file OR use Admin Panel -> Shop editor.
+# buy = price to buy 1 item (0 = not for sale), sell = price you get selling 1 item (0 = can't sell)
+# Every category page shows 27 items (a shulker box); more items go to the next page.
+version: 2
+categories:
+  blocks:
+    icon: GRASS_BLOCK
+    name: "&aBlocks"
+    items:
+      stone: {material: STONE, buy: 8, sell: 1}
+      cobblestone: {material: COBBLESTONE, buy: 4, sell: 0.5}
+      dirt: {material: DIRT, buy: 2, sell: 0.2}
+      grass_block: {material: GRASS_BLOCK, buy: 6, sell: 0.5}
+      sand: {material: SAND, buy: 6, sell: 1}
+      red_sand: {material: RED_SAND, buy: 8, sell: 1}
+      gravel: {material: GRAVEL, buy: 5, sell: 0.5}
+      glass: {material: GLASS, buy: 12, sell: 1.5}
+      sandstone: {material: SANDSTONE, buy: 10, sell: 1.5}
+      stone_bricks: {material: STONE_BRICKS, buy: 12, sell: 1.5}
+      bricks: {material: BRICKS, buy: 20, sell: 3}
+      terracotta: {material: TERRACOTTA, buy: 15, sell: 2}
+      white_wool: {material: WHITE_WOOL, buy: 18, sell: 2}
+      clay: {material: CLAY, buy: 12, sell: 1.5}
+      andesite: {material: ANDESITE, buy: 6, sell: 0.8}
+      diorite: {material: DIORITE, buy: 6, sell: 0.8}
+      granite: {material: GRANITE, buy: 6, sell: 0.8}
+      smooth_stone: {material: SMOOTH_STONE, buy: 10, sell: 1.5}
+      deepslate: {material: DEEPSLATE, buy: 10, sell: 1}
+      cobbled_deepslate: {material: COBBLED_DEEPSLATE, buy: 6, sell: 0.8}
+      netherrack: {material: NETHERRACK, buy: 3, sell: 0.3}
+      end_stone: {material: END_STONE, buy: 12, sell: 1.5}
+      obsidian: {material: OBSIDIAN, buy: 120, sell: 15}
+      glowstone: {material: GLOWSTONE, buy: 40, sell: 6}
+      sea_lantern: {material: SEA_LANTERN, buy: 60, sell: 9}
+      quartz_block: {material: QUARTZ_BLOCK, buy: 80, sell: 12}
+      bookshelf: {material: BOOKSHELF, buy: 90, sell: 10}
+  wood:
+    icon: OAK_LOG
+    name: "&6Wood"
+    items:
+      oak_log: {material: OAK_LOG, buy: 10, sell: 2}
+      spruce_log: {material: SPRUCE_LOG, buy: 10, sell: 2}
+      birch_log: {material: BIRCH_LOG, buy: 10, sell: 2}
+      jungle_log: {material: JUNGLE_LOG, buy: 10, sell: 2}
+      acacia_log: {material: ACACIA_LOG, buy: 10, sell: 2}
+      dark_oak_log: {material: DARK_OAK_LOG, buy: 10, sell: 2}
+      cherry_log: {material: CHERRY_LOG, buy: 10, sell: 2}
+      mangrove_log: {material: MANGROVE_LOG, buy: 10, sell: 2}
+      oak_planks: {material: OAK_PLANKS, buy: 3, sell: 0.5}
+      spruce_planks: {material: SPRUCE_PLANKS, buy: 3, sell: 0.5}
+      birch_planks: {material: BIRCH_PLANKS, buy: 3, sell: 0.5}
+      jungle_planks: {material: JUNGLE_PLANKS, buy: 3, sell: 0.5}
+      acacia_planks: {material: ACACIA_PLANKS, buy: 3, sell: 0.5}
+      dark_oak_planks: {material: DARK_OAK_PLANKS, buy: 3, sell: 0.5}
+      stick: {material: STICK, buy: 2, sell: 0.2}
+      ladder: {material: LADDER, buy: 6, sell: 1}
+      chest: {material: CHEST, buy: 25, sell: 3}
+      barrel: {material: BARREL, buy: 25, sell: 3}
+      crafting_table: {material: CRAFTING_TABLE, buy: 15, sell: 2}
+      oak_sapling: {material: OAK_SAPLING, buy: 8, sell: 1}
+      spruce_sapling: {material: SPRUCE_SAPLING, buy: 8, sell: 1}
+      birch_sapling: {material: BIRCH_SAPLING, buy: 8, sell: 1}
+  ores:
+    icon: DIAMOND
+    name: "&bOres & Resources"
+    items:
+      coal: {material: COAL, buy: 20, sell: 4}
+      charcoal: {material: CHARCOAL, buy: 18, sell: 3}
+      iron_ingot: {material: IRON_INGOT, buy: 60, sell: 12}
+      gold_ingot: {material: GOLD_INGOT, buy: 100, sell: 20}
+      copper_ingot: {material: COPPER_INGOT, buy: 30, sell: 6}
+      diamond: {material: DIAMOND, buy: 600, sell: 120}
+      emerald: {material: EMERALD, buy: 400, sell: 80}
+      lapis_lazuli: {material: LAPIS_LAZULI, buy: 25, sell: 5}
+      redstone: {material: REDSTONE, buy: 15, sell: 3}
+      quartz: {material: QUARTZ, buy: 20, sell: 4}
+      netherite_ingot: {material: NETHERITE_INGOT, buy: 8000, sell: 1600}
+      netherite_scrap: {material: NETHERITE_SCRAP, buy: 1800, sell: 360}
+      amethyst_shard: {material: AMETHYST_SHARD, buy: 40, sell: 8}
+      raw_iron: {material: RAW_IRON, buy: 40, sell: 8}
+      raw_gold: {material: RAW_GOLD, buy: 70, sell: 14}
+      raw_copper: {material: RAW_COPPER, buy: 20, sell: 4}
+      iron_block: {material: IRON_BLOCK, buy: 540, sell: 108}
+      gold_block: {material: GOLD_BLOCK, buy: 900, sell: 180}
+      diamond_block: {material: DIAMOND_BLOCK, buy: 5400, sell: 1080}
+      emerald_block: {material: EMERALD_BLOCK, buy: 3600, sell: 720}
+      coal_block: {material: COAL_BLOCK, buy: 180, sell: 36}
+      ancient_debris: {material: ANCIENT_DEBRIS, buy: 2000, sell: 400}
+      lapis_block: {material: LAPIS_BLOCK, buy: 225, sell: 45}
+      redstone_block: {material: REDSTONE_BLOCK, buy: 135, sell: 27}
+      copper_block: {material: COPPER_BLOCK, buy: 270, sell: 54}
+  farming:
+    icon: WHEAT
+    name: "&eFarming"
+    items:
+      wheat: {material: WHEAT, buy: 10, sell: 2}
+      wheat_seeds: {material: WHEAT_SEEDS, buy: 4, sell: 0.5}
+      carrot: {material: CARROT, buy: 8, sell: 1}
+      potato: {material: POTATO, buy: 8, sell: 1}
+      beetroot: {material: BEETROOT, buy: 8, sell: 1}
+      pumpkin: {material: PUMPKIN, buy: 15, sell: 3}
+      melon_slice: {material: MELON_SLICE, buy: 4, sell: 0.5}
+      sugar_cane: {material: SUGAR_CANE, buy: 6, sell: 1}
+      bamboo: {material: BAMBOO, buy: 5, sell: 0.5}
+      cactus: {material: CACTUS, buy: 8, sell: 1}
+      cocoa_beans: {material: COCOA_BEANS, buy: 10, sell: 1.5}
+      nether_wart: {material: NETHER_WART, buy: 25, sell: 4}
+      sweet_berries: {material: SWEET_BERRIES, buy: 6, sell: 1}
+      bone_meal: {material: BONE_MEAL, buy: 12, sell: 1.5}
+      hay_block: {material: HAY_BLOCK, buy: 70, sell: 12}
+      sugar: {material: SUGAR, buy: 8, sell: 1}
+      egg: {material: EGG, buy: 6, sell: 1}
+      kelp: {material: KELP, buy: 4, sell: 0.5}
+      apple: {material: APPLE, buy: 10, sell: 1.5}
+      beetroot_seeds: {material: BEETROOT_SEEDS, buy: 4, sell: 0.5}
+      pumpkin_seeds: {material: PUMPKIN_SEEDS, buy: 4, sell: 0.5}
+      melon_seeds: {material: MELON_SEEDS, buy: 4, sell: 0.5}
+  food:
+    icon: COOKED_BEEF
+    name: "&6Food"
+    items:
+      bread: {material: BREAD, buy: 15, sell: 2}
+      cooked_beef: {material: COOKED_BEEF, buy: 25, sell: 4}
+      cooked_porkchop: {material: COOKED_PORKCHOP, buy: 25, sell: 4}
+      cooked_chicken: {material: COOKED_CHICKEN, buy: 20, sell: 3}
+      cooked_mutton: {material: COOKED_MUTTON, buy: 20, sell: 3}
+      cooked_salmon: {material: COOKED_SALMON, buy: 20, sell: 3}
+      cooked_cod: {material: COOKED_COD, buy: 18, sell: 3}
+      baked_potato: {material: BAKED_POTATO, buy: 12, sell: 2}
+      golden_carrot: {material: GOLDEN_CARROT, buy: 60, sell: 10}
+      golden_apple: {material: GOLDEN_APPLE, buy: 400, sell: 60}
+      enchanted_golden_apple: {material: ENCHANTED_GOLDEN_APPLE, buy: 6000, sell: 900}
+      pumpkin_pie: {material: PUMPKIN_PIE, buy: 30, sell: 5}
+      cookie: {material: COOKIE, buy: 8, sell: 1}
+      cake: {material: CAKE, buy: 50, sell: 8}
+      mushroom_stew: {material: MUSHROOM_STEW, buy: 20, sell: 3}
+  tools:
+    icon: DIAMOND_PICKAXE
+    name: "&bTools & Weapons"
+    items:
+      iron_sword: {material: IRON_SWORD, buy: 150, sell: 25}
+      iron_pickaxe: {material: IRON_PICKAXE, buy: 200, sell: 30}
+      iron_axe: {material: IRON_AXE, buy: 180, sell: 25}
+      iron_shovel: {material: IRON_SHOVEL, buy: 80, sell: 12}
+      iron_hoe: {material: IRON_HOE, buy: 130, sell: 20}
+      diamond_sword: {material: DIAMOND_SWORD, buy: 1500, sell: 250}
+      diamond_pickaxe: {material: DIAMOND_PICKAXE, buy: 1800, sell: 300}
+      diamond_axe: {material: DIAMOND_AXE, buy: 1800, sell: 300}
+      diamond_shovel: {material: DIAMOND_SHOVEL, buy: 700, sell: 120}
+      diamond_hoe: {material: DIAMOND_HOE, buy: 1200, sell: 200}
+      bow: {material: BOW, buy: 100, sell: 15}
+      crossbow: {material: CROSSBOW, buy: 150, sell: 25}
+      arrow: {material: ARROW, buy: 5, sell: 0.5}
+      shield: {material: SHIELD, buy: 80, sell: 12}
+      fishing_rod: {material: FISHING_ROD, buy: 40, sell: 6}
+      shears: {material: SHEARS, buy: 60, sell: 9}
+      flint_and_steel: {material: FLINT_AND_STEEL, buy: 50, sell: 8}
+      bucket: {material: BUCKET, buy: 70, sell: 10}
+      water_bucket: {material: WATER_BUCKET, buy: 75, sell: 10}
+      lava_bucket: {material: LAVA_BUCKET, buy: 90, sell: 12}
+  armor:
+    icon: DIAMOND_CHESTPLATE
+    name: "&9Armor"
+    items:
+      iron_helmet: {material: IRON_HELMET, buy: 250, sell: 40}
+      iron_chestplate: {material: IRON_CHESTPLATE, buy: 400, sell: 60}
+      iron_leggings: {material: IRON_LEGGINGS, buy: 350, sell: 50}
+      iron_boots: {material: IRON_BOOTS, buy: 200, sell: 30}
+      diamond_helmet: {material: DIAMOND_HELMET, buy: 2000, sell: 300}
+      diamond_chestplate: {material: DIAMOND_CHESTPLATE, buy: 3200, sell: 500}
+      diamond_leggings: {material: DIAMOND_LEGGINGS, buy: 2800, sell: 450}
+      diamond_boots: {material: DIAMOND_BOOTS, buy: 1600, sell: 250}
+      netherite_helmet: {material: NETHERITE_HELMET, buy: 15000, sell: 2000}
+      netherite_chestplate: {material: NETHERITE_CHESTPLATE, buy: 24000, sell: 3200}
+      netherite_leggings: {material: NETHERITE_LEGGINGS, buy: 21000, sell: 2800}
+      netherite_boots: {material: NETHERITE_BOOTS, buy: 12000, sell: 1600}
+      turtle_helmet: {material: TURTLE_HELMET, buy: 1500, sell: 200}
+      elytra: {material: ELYTRA, buy: 25000, sell: 3000}
+  redstone:
+    icon: REDSTONE
+    name: "&cRedstone"
+    items:
+      redstone: {material: REDSTONE, buy: 15, sell: 3}
+      repeater: {material: REPEATER, buy: 40, sell: 6}
+      comparator: {material: COMPARATOR, buy: 90, sell: 14}
+      piston: {material: PISTON, buy: 60, sell: 9}
+      sticky_piston: {material: STICKY_PISTON, buy: 80, sell: 12}
+      observer: {material: OBSERVER, buy: 70, sell: 10}
+      hopper: {material: HOPPER, buy: 120, sell: 18}
+      dropper: {material: DROPPER, buy: 40, sell: 6}
+      dispenser: {material: DISPENSER, buy: 50, sell: 8}
+      tnt: {material: TNT, buy: 120, sell: 18}
+      redstone_torch: {material: REDSTONE_TORCH, buy: 12, sell: 2}
+      lever: {material: LEVER, buy: 6, sell: 1}
+      stone_button: {material: STONE_BUTTON, buy: 4, sell: 0.5}
+      daylight_detector: {material: DAYLIGHT_DETECTOR, buy: 90, sell: 14}
+      target: {material: TARGET, buy: 50, sell: 7}
+      slime_block: {material: SLIME_BLOCK, buy: 150, sell: 25}
+      honey_block: {material: HONEY_BLOCK, buy: 80, sell: 12}
+      redstone_lamp: {material: REDSTONE_LAMP, buy: 60, sell: 9}
+      rail: {material: RAIL, buy: 10, sell: 1.5}
+      powered_rail: {material: POWERED_RAIL, buy: 30, sell: 4}
+      minecart: {material: MINECART, buy: 80, sell: 12}
+      note_block: {material: NOTE_BLOCK, buy: 30, sell: 4}
+  drops:
+    icon: BONE
+    name: "&7Mob Drops"
+    items:
+      bone: {material: BONE, buy: 8, sell: 1}
+      string: {material: STRING, buy: 8, sell: 1}
+      gunpowder: {material: GUNPOWDER, buy: 15, sell: 2}
+      rotten_flesh: {material: ROTTEN_FLESH, buy: 3, sell: 0.3}
+      spider_eye: {material: SPIDER_EYE, buy: 8, sell: 1}
+      ender_pearl: {material: ENDER_PEARL, buy: 120, sell: 20}
+      blaze_rod: {material: BLAZE_ROD, buy: 80, sell: 12}
+      ghast_tear: {material: GHAST_TEAR, buy: 200, sell: 30}
+      slime_ball: {material: SLIME_BALL, buy: 15, sell: 2}
+      leather: {material: LEATHER, buy: 10, sell: 1.5}
+      feather: {material: FEATHER, buy: 5, sell: 0.5}
+      ink_sac: {material: INK_SAC, buy: 8, sell: 1}
+      phantom_membrane: {material: PHANTOM_MEMBRANE, buy: 70, sell: 10}
+      prismarine_shard: {material: PRISMARINE_SHARD, buy: 12, sell: 2}
+      nautilus_shell: {material: NAUTILUS_SHELL, buy: 400, sell: 60}
+      shulker_shell: {material: SHULKER_SHELL, buy: 600, sell: 90}
+      breeze_rod: {material: BREEZE_ROD, buy: 100, sell: 15}
+      rabbit_hide: {material: RABBIT_HIDE, buy: 8, sell: 1}
+      blaze_powder: {material: BLAZE_POWDER, buy: 50, sell: 7}
+      ender_eye: {material: ENDER_EYE, buy: 200, sell: 30}
+      magma_cream: {material: MAGMA_CREAM, buy: 40, sell: 6}
+  misc:
+    icon: ANVIL
+    name: "&dMisc"
+    items:
+      torch: {material: TORCH, buy: 6, sell: 1}
+      furnace: {material: FURNACE, buy: 20, sell: 3}
+      blast_furnace: {material: BLAST_FURNACE, buy: 120, sell: 18}
+      smoker: {material: SMOKER, buy: 60, sell: 9}
+      anvil: {material: ANVIL, buy: 400, sell: 60}
+      enchanting_table: {material: ENCHANTING_TABLE, buy: 1500, sell: 200}
+      experience_bottle: {material: EXPERIENCE_BOTTLE, buy: 150, sell: 20}
+      name_tag: {material: NAME_TAG, buy: 300, sell: 40}
+      saddle: {material: SADDLE, buy: 250, sell: 35}
+      ender_chest: {material: ENDER_CHEST, buy: 800, sell: 100}
+      shulker_box: {material: SHULKER_BOX, buy: 900, sell: 120}
+      brewing_stand: {material: BREWING_STAND, buy: 150, sell: 20}
+      cauldron: {material: CAULDRON, buy: 100, sell: 15}
+      composter: {material: COMPOSTER, buy: 20, sell: 3}
+      bell: {material: BELL, buy: 300, sell: 40}
+      lantern: {material: LANTERN, buy: 20, sell: 3}
+      campfire: {material: CAMPFIRE, buy: 25, sell: 3}
+      book: {material: BOOK, buy: 30, sell: 5}
+      paper: {material: PAPER, buy: 6, sell: 1}
+      writable_book: {material: WRITABLE_BOOK, buy: 50, sell: 8}
+      map: {material: MAP, buy: 40, sell: 6}
+      lead: {material: LEAD, buy: 30, sell: 4}
+      glass_bottle: {material: GLASS_BOTTLE, buy: 5, sell: 0.5}

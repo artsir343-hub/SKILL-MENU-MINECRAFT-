@@ -1,0 +1,35 @@
+# SKILL SMP kits. Edit here OR use Admin Panel -> Kits editor (creates a kit from your whole inventory:
+# hotbar + inventory + ARMOR + offhand = up to 41 items; armor is auto-equipped when claimed).
+# cooldown = seconds, price = money, permission optional ("" = everyone), once: true = one time only.
+# items: list of  MATERIAL:amount
+kits:
+  starter:
+    name: "&aStarter Kit"
+    icon: WOODEN_SWORD
+    cooldown: 86400
+    price: 0
+    once: false
+    permission: ""
+    lore:
+      - "&7A basic kit for new players"
+    items:
+      - "STONE_SWORD:1"
+      - "STONE_PICKAXE:1"
+      - "COOKED_BEEF:16"
+      - "OAK_LOG:16"
+  warrior:
+    name: "&cWarrior Kit"
+    icon: IRON_SWORD
+    cooldown: 172800
+    price: 1000
+    once: false
+    permission: ""
+    lore:
+      - "&7Iron gear for battles"
+    items:
+      - "IRON_SWORD:1"
+      - "IRON_HELMET:1"
+      - "IRON_CHESTPLATE:1"
+      - "IRON_LEGGINGS:1"
+      - "IRON_BOOTS:1"
+      - "GOLDEN_APPLE:3"
